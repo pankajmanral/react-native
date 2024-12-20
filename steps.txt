@@ -1,0 +1,65 @@
+npm i -g expo-cli
+
+vscode extensions
+	react native tools
+	react native/react snippets
+	material icon themes
+
+
+first app
+	expo init app_name
+		blank 
+
+start server
+	npm start
+
+
+run on android emulator
+	download android studio
+
+
+components and their props
+Text 
+	numberOfLines 
+	onPress = {}
+		when the text has been clicked a user built function can be executed
+		eg:
+			const handlePress = () =>{
+				console.log("The text has been clicked")
+			}
+
+		<Text onPress={handlePress}>This is the text</Text>
+	
+Image
+	to get the static image from the folder we have to use the require props
+	<Image source = {require('location')} />
+	but the set the image component to get the image from the internet we set 3 properties 
+		{{
+			height : int,
+			width : int,
+			uri : 'image_url'
+		}}
+
+	by default react native will set the height and width for the local images(static) but for uri images we have to specify
+
+	blurRadius
+		blurs the image
+
+	fadeDuration - only for android
+	resizeMode 
+	onLoad
+	onLoadEnd 
+	onLoadStart
+
+Touchables
+	TouchableHighlights 
+	TouchableOpacity
+	TouchableWithoutFeedback
+	TouchableNativeFeedback - Android
+
+Button 
+	<Button title="Click me" color="red" onPress={()=>{console.log("Button Pressed")}}></Button>
+
+Alert 
+	Alert.alert - gives an alert box 
+	Alert.prompt - allows user to input a value or anything (IOS only)
